@@ -1,0 +1,13 @@
+---
+- name: BASIC TASKS
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Ensure ansible user exists
+      user:
+        name: ansible
+        state: present
+
+    - name: Test host connectivity
+      ping:
